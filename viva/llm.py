@@ -6,7 +6,7 @@ import re
 import time
 
 PROVIDERS = {
-    "Groq": {"base_url": "https://api.groq.com/openai/v1", "model": "llama-3.3-70b-versatile"},
+    "Groq": {"base_url": "https://api.groq.com/openai/v1", "model": "openai/gpt-oss-120b"},
     "Gemini": {"base_url": "https://generativelanguage.googleapis.com/v1beta/openai/", "model": "gemini-2.5-flash"},
     "OpenAI": {"base_url": None, "model": "gpt-4o-mini"},
 }

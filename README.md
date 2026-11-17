@@ -54,6 +54,8 @@ repo (GitHub API / ZIP / folder)
   -> report with verdict, evidence, red flags
 ```
 
+Default model: `openai/gpt-oss-120b` on Groq (any OpenAI-compatible provider works).
+
 Design choices worth knowing:
 
 - **Grounded questions.** The model picks code units by number; file paths and line numbers come from the parser, so they can't be hallucinated.
@@ -70,16 +72,16 @@ python eval/run_eval.py                                  # offline grader
 LLM_API_KEY=... python eval/run_eval.py --llm --provider Groq
 ```
 
-Six hand-written questions about the sample repo, each with a strong, a vague and a wrong answer, plus one prompt-injection answer. Offline grader results:
+Six hand-written questions about the sample repo, each with a strong, a vague and a wrong answer, plus one prompt-injection answer.
 
-| Metric | Offline |
-|---|---|
-| Mean score strong / vague / wrong | 76.3 / 5.7 / 5.7 |
-| Pairwise ordering accuracy | 0.944 |
-| Verdict accuracy | 0.889 |
-| Injection answer score | 0 |
+| Metric | Offline grader | LLM grader (Groq, gpt-oss-120b) |
+|---|---|---|
+| Mean score strong / vague / wrong | 76.3 / 5.7 / 5.7 | 100 / 14.8 / 0 |
+| Pairwise ordering accuracy | 0.944 | 1.000 |
+| Verdict accuracy | 0.889 | 1.000 |
+| Injection answer score | 0 | 0 |
 
-The offline grader separates strong answers well but can't tell vague from wrong. Catching answers that contradict the code is what the LLM grader is for.
+The offline grader separates strong answers well but can't tell vague from wrong. The LLM grader ranks all three correctly, because it catches answers that contradict the code. Six cases is a small benchmark; see the Technical Approach Report for limitations.
 
 ## Tests
 
