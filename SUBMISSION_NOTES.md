@@ -1,8 +1,11 @@
 # Submission notes
 
-**Candidate:** Anant Pandey
-**Role:** AI/ML Engineer Intern
-**Task:** Identify an AI Opportunity for Cynbit
+**Candidate:** Anant Pandey  
+**Role:** AI/ML Engineer Intern  
+**Task:** Identify an AI Opportunity for Cynbit  
+
+**Repository:** https://github.com/Anant8299/project-viva  
+**Live demo:** https://cynbit-project-viva.streamlit.app/
 
 ## What I built
 

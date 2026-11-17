@@ -4,6 +4,8 @@ An AI interviewer that asks candidates about **their own code** and checks the a
 
 Built for the Cynbit Technologies AI/ML Engineer Intern assessment: *Identify an AI Opportunity for Cynbit*.
 
+**Live demo:** https://cynbit-project-viva.streamlit.app/
+
 Point it at a GitHub repo. It reads the code, picks the functions that carry the most logic, and asks 3 to 8 questions grounded in specific lines ("In `create_short_link`, what happens when every generated code collides?"). The candidate answers in their own words. Each answer is graded point by point against the code, and the report shows the evidence behind every score.
 
 One engine, three uses at Cynbit:
@@ -17,7 +19,7 @@ One engine, three uses at Cynbit:
 | Deliverable | Where |
 |---|---|
 | AI Opportunity Report | [docs/AI_Opportunity_Report.md](docs/AI_Opportunity_Report.md) |
-| Proof of concept | `app.py` (Streamlit) and the `viva/` package |
+| Proof of concept | `app.py` (Streamlit) and the `viva/` package. Live: [cynbit-project-viva.streamlit.app](https://cynbit-project-viva.streamlit.app/) |
 | Technical Approach Report | [docs/Technical_Approach_Report.md](docs/Technical_Approach_Report.md) |
 | PDF copies of both reports | `docs/*.pdf` |
 | Evaluation | `eval/run_eval.py`, `eval/cases.json`, results in `eval/results_offline.json` |
