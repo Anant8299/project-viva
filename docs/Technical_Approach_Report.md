@@ -284,7 +284,7 @@ One demonstration run achieved an overall score of 95/100. This demonstrates the
 ### Installation
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Anant8299/project-viva.git
 cd project-viva
 python -m venv .venv
 ```

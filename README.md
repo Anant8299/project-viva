@@ -28,7 +28,7 @@ One engine, three uses at Cynbit:
 ## Run it
 
 ```bash
-git clone <this repo> && cd project-viva
+git clone https://github.com/Anant8299/project-viva.git && cd project-viva
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py
