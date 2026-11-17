@@ -1,95 +1,189 @@
-# AI Opportunity Report: Cynbit Technologies
+# AI Opportunity Report
 
-**Prepared for:** Cynbit Technologies, AI/ML Engineer Intern assessment  
-**Author:** Anant Pandey  
-**Date:** November 2026
+## AI-Powered Code Understanding and Technical Assessment Platform
 
-## 1. What Cynbit does today
+| | |
+|---|---|
+| **Prepared by** | Anant Pandey |
+| **Role** | AI/ML Engineer Intern Candidate |
+| **Organization** | Cynbit Technologies |
+| **Date** | November 2026 |
 
-Cynbit is a Jaipur-based engineering studio. From its website and public profiles, the business has four parts:
+---
 
-| Line | What it is | Who pays |
+## 1. Executive Summary
+
+Artificial Intelligence and Large Language Models (LLMs) are creating new opportunities to improve technical education, developer assessment and software engineering workflows.
+
+Cynbit Technologies operates across AI automation, software development and digital products. Its product ecosystem includes Cynbit Studio, an AI-powered learning and career-readiness platform, and BitElevate, a practical technology education initiative.
+
+One promising opportunity is an **AI-powered Code Understanding and Technical Assessment Platform** that evaluates not only whether a candidate can produce working code, but also whether they understand the logic, architecture and decisions behind it.
+
+The proposed solution, **Project Viva**, analyzes a software repository, identifies important code units, generates contextual technical questions and evaluates candidate answers using an LLM. A working proof of concept demonstrates this workflow through a Streamlit application.
+
+## 2. Company and Industry Context
+
+### 2.1 Cynbit Technologies
+
+Based on its publicly available website, Cynbit operates in several technology areas:
+
+- AI automation and autonomous agents
+- LLM integrations and intelligent workflows
+- Custom software and SaaS development
+- Cloud infrastructure and backend engineering
+- Digital systems and business automation
+
+Its existing products include:
+
+| Product | Focus |
+|---|---|
+| **Cynbit Studio** | AI-assisted learning, coding missions, code evaluation, mentorship and career preparation |
+| **Revio** | AI-assisted review management and sentiment intelligence |
+| **TenantEase** | Property and tenant management |
+
+Cynbit also runs **BitElevate**, which emphasizes practical learning through technical specialization tracks.
+
+### 2.2 Industry Opportunity
+
+Technical education and recruitment increasingly require more than theoretical knowledge or successful code execution. Traditional coding assessments usually focus on:
+
+- whether the submitted code produces the expected output,
+- whether predefined test cases pass, and
+- whether a candidate can solve a programming problem within a time limit.
+
+These methods do not fully establish whether someone understands their own implementation. A candidate may submit working code without being able to explain:
+
+- why a particular algorithm or function was selected,
+- how data moves between components,
+- how exceptions and edge cases are handled,
+- what happens when a particular condition changes, or
+- how different modules interact.
+
+The gap is widening as AI coding assistants make it easy to produce working code quickly. This creates a clear opportunity for AI-assisted code comprehension and viva-based evaluation.
+
+## 3. Identified AI/ML Opportunities
+
+| Opportunity | Potential application | Business value |
 |---|---|---|
-| Services | AI automation (LLMs, agents), web and mobile development, AWS/Azure cloud, technical SEO and digital marketing. 13 public case studies across healthcare, fintech, retail, edtech. | Business clients |
-| Cynbit Studio | "AI career growth lab": placement assessment, adaptive coding missions, AI code evaluation, AI mentor hints, skill tracking, and career tools (AI mock interviews, resume engine, job matcher). | Students and developers |
-| BitElevate | 60-day remote internship. Students work in a Cynbit GitHub repo, open one PR a day, and get line-by-line mentor review. One-time enrollment fee. PPO track for top performers. | Students |
-| Revio, TenantEase | SaaS products. Revio is an AI review and reputation engine for multi-location brands. TenantEase is property and tenant management (rent tracking, units, tenant profiles). | Businesses, landlords |
+| AI code understanding | Analyze repositories and explain code structure | Better developer understanding |
+| Intelligent technical assessment | Generate repository-specific viva questions | More contextual assessments |
+| Automated answer evaluation | Evaluate explanations using LLMs | Reduced manual evaluation effort |
+| Adaptive learning | Identify knowledge gaps and recommend topics | Personalized learning |
+| AI code review assistance | Identify potential quality and maintainability issues | Improved development workflows |
 
-Two things stand out.
+### Recommended Opportunity: AI-Powered Code Understanding and Technical Assessment
 
-First, a large share of Cynbit's work is about **evaluating engineers**: Studio scores code and runs mock interviews, BitElevate reviews daily PRs, and Cynbit hires constantly through take-home assessments like this one. The same skill (judging whether someone can actually do the work) shows up in three places.
+This opportunity fits Cynbit Studio's existing focus on AI coding missions, automated code evaluation, AI mentorship and mock interviews. It could also complement BitElevate's practical learning and assessment activities.
 
-Second, that skill is getting harder. Most candidates now write code with AI assistants. Many public submissions to Cynbit's own assessments say so openly in their READMEs. That is fine and often a good sign, but it means a working repo no longer proves the person understands it. A reviewer has to find out, and today the only way is a live conversation with a senior engineer.
+It combines the first three opportunities in the table above into one product, and lays the groundwork for the fourth: once answers are graded point by point, the same data shows each learner's knowledge gaps.
 
-## 2. Industry context
+## 4. Proposed Solution: Project Viva
 
-**Hiring and edtech.** Take-home assignments became the default screening step because they show real work. AI coding tools have weakened that signal: two candidates can submit similar, polished repos with very different understanding behind them. Companies are responding with follow-up "explain your code" interviews, which are effective but expensive, since they need an engineer's time per candidate.
+Project Viva is an AI-powered technical viva system that evaluates a candidate's understanding of an actual software repository. Instead of asking generic programming questions, it uses the candidate's submitted code as the basis for assessment.
 
-**Interview practice.** Students preparing for placements mostly practise generic question banks (DSA, OOP, DBMS). The question that trips them up in real interviews is usually about their own project: "why did you do it this way?", "what happens if this fails?". Generic mock interviews don't train that.
+**How it works:**
 
-**Reputation and PropTech SaaS.** Review management (Revio's space) is mature, with established global players, and sentiment plus reply drafting is now table stakes. Rent-risk prediction (TenantEase) needs real payment history to be useful, which a young product may not have yet.
+> Repository → Code analysis → Question generation → Candidate answers → AI evaluation → Assessment report
 
-## 3. Opportunities
+### Core Capabilities
 
-I scored each idea from 1 to 5 on four things: business impact, feasibility with data Cynbit has or can easily get, time to first value, and how much it differentiates Cynbit from competitors.
+**1. Repository ingestion**
 
-| # | Opportunity | Where | Impact | Feasibility | Time to value | Differentiation | Total |
-|---|---|---|---|---|---|---|---|
-| 1 | **Project Viva**: AI interviewer that asks candidates about their own repo and checks answers against the code | Studio + hiring + BitElevate | 5 | 5 | 5 | 5 | **20** |
-| 2 | First-pass AI review of BitElevate daily PRs, mentor approves | BitElevate | 5 | 4 | 4 | 3 | 16 |
-| 3 | Adaptive mission recommendations using knowledge tracing on Studio attempts | Studio | 4 | 3 | 3 | 4 | 14 |
-| 4 | Inbound lead triage and first-draft scoping for services inquiries | Services | 4 | 3 | 4 | 2 | 13 |
-| 5 | Revio: coordinated fake-review and review-bomb detection across locations | Revio | 4 | 3 | 3 | 3 | 13 |
-| 6 | Revio: aspect-level sentiment and crisis escalation | Revio | 3 | 4 | 4 | 1 | 12 |
-| 7 | TenantEase: lease and ID document extraction | TenantEase | 3 | 4 | 3 | 2 | 12 |
-| 8 | TenantEase: late-payment risk scoring | TenantEase | 4 | 2 | 2 | 3 | 11 |
-| 9 | Website assistant grounded in Cynbit's pages | Marketing | 2 | 5 | 5 | 1 | 13 |
+- Accepts a public GitHub repository or an uploaded ZIP project
+- Retrieves supported source-code files and skips vendored or generated code
+- Identifies the most relevant functions and code units
 
-Short notes on the ones I did not pick:
+**2. Code analysis**
 
-- **PR review (#2)** is valuable, but it overlaps with mature tools (GitHub's own review features and several AI review bots). Its real value is cost saving for mentors, not a new capability.
-- **Revio sentiment (#6)** is something Revio already advertises. A PoC would mostly re-build an existing feature.
-- **TenantEase risk (#8)** needs months of real payment data. On synthetic data any model looks good, which proves little.
-- **Website assistant (#9)** is cheap to build but has low impact; Cynbit's site traffic is mostly students and prospective clients who convert through the contact form anyway.
+- Extracts functions and their exact source locations
+- Identifies conditions, loops, function calls, exceptions and return statements
+- Builds contextual information for question generation
 
-## 4. Selected opportunity: Project Viva
+**3. Intelligent question generation**
 
-**What it does.** A candidate or student gives a GitHub repo. The system reads the code, picks the functions that carry the most logic, and writes 3 to 8 questions grounded in specific lines: why a check exists, what happens when a call fails, how data moves through a function. The candidate answers in their own words. The system grades each answer against the actual code, point by point, and flags answers that contradict the code.
+- Generates questions grounded in specific code units
+- Covers reasoning, edge cases, data flow and failure scenarios
+- Keeps an offline, template-based fallback when no LLM is available
 
-**Why it is the best fit for Cynbit.**
+**4. AI-based answer evaluation**
 
-1. **One engine, three uses.**
-   - *Cynbit Studio:* it is the "AI mock interviews" feature, but tied to the student's own projects, which is the part of real interviews students are least prepared for.
-   - *Hiring:* after a take-home assessment, every candidate gets an automatic viva. Reviewers spend their time only on candidates who can explain their work.
-   - *BitElevate:* at the end of a sprint, interns explain the PRs they shipped. Mentors see who understood the work and who copied it.
-2. **It answers the question AI coding tools raised.** Cynbit doesn't need to ban AI assistance. It needs to know whether the person can reason about the code they submit, and this measures that directly.
-3. **Uses data Cynbit already has.** Every assessment and every BitElevate intern already produces a GitHub repo. There's no data collection project before it can start.
-4. **Low risk.** It never runs candidate code (it only reads it), it doesn't make hiring decisions on its own (it produces a report for a person), and each verdict comes with the evidence behind it.
+- Compares candidate answers against expected points
+- Identifies correct, incomplete and incorrect explanations
+- Detects factual contradictions with the code
+- Generates actionable feedback
 
-**Expected value.**
+**5. Assessment reporting**
 
-- *Hiring:* a senior engineer's "walk me through your code" call (my estimate: 20-30 minutes per candidate) is replaced, for most candidates, by a 10-minute async viva plus a couple of minutes reading the report. Live calls are kept for the borderline and top candidates. The pilot below would measure the real numbers.
-- *Studio:* a feature students would pay for, because it trains exactly the question placement interviewers ask about resume projects.
-- *BitElevate:* a stronger certificate. "Passed a viva on their own code" means more to an employer than "submitted 60 PRs".
+- Calculates question-wise and overall scores
+- Provides feedback and an assessment verdict
+- Generates a structured, downloadable report
 
-**How success would be measured in a pilot.**
+## 5. Target Users and Use Cases
 
-- Agreement between the viva verdict and a senior engineer's verdict on the same candidates (target: the two agree on most candidates, and the viva never rates a candidate "understands" when the engineer rated them "weak").
-- Reviewer time per candidate, before and after.
-- For Studio: repeat usage, and whether students who practise score better in later vivas.
+| Target user | Use case |
+|---|---|
+| Students | Test understanding of academic and personal projects |
+| Coding learners | Identify gaps in programming knowledge |
+| Training institutes | Conduct repository-based technical assessments |
+| Recruiters | Supplement technical interviews with contextual questions |
+| Developers | Explain and validate understanding of unfamiliar codebases |
 
-## 5. Risks and how the design handles them
+## 6. Expected Business Value
+
+| Benefit | Description |
+|---|---|
+| More contextual evaluation | Questions are based on the actual submitted code rather than generic question banks |
+| Scalable assessments | LLM-assisted evaluation reduces repetitive manual assessment work |
+| Improved learning feedback | Candidates receive specific feedback on missing concepts and incorrect explanations |
+| Better employability preparation | Repository-based viva sessions help learners explain their projects in interviews |
+| Product differentiation | Complements Cynbit Studio's existing coding assessment and mock interview capabilities |
+
+*These are expected benefits to be validated through a pilot, not measured business outcomes.*
+
+## 7. Feasibility and Implementation Strategy
+
+A phased implementation is recommended.
+
+| Phase | Scope | Status |
+|---|---|---|
+| **Phase 1: Functional prototype** | GitHub repository ingestion, source-code analysis, contextual question generation, LLM-based answer grading, offline fallback, assessment reports | Completed in this proof of concept |
+| **Phase 2: Evaluation and improvement** | Test across more programming languages; expand the benchmark of strong, vague and incorrect answers; evaluate question relevance and grading consistency; test prompt-injection resistance; improve latency and token efficiency | Initial benchmark and injection test included; expansion pending |
+| **Phase 3: Product integration** | Integrate with Cynbit Studio; add candidate and instructor dashboards; store assessment history; introduce skill-wise performance tracking; support instructor review and feedback | Proposed |
+
+The feasibility of the core idea is already shown by the proof of concept: it runs end to end on a sample repository, includes 36 automated tests, and has a small evaluation set covering strong, vague, incorrect and prompt-injection answers. Details are in the Technical Approach Report.
+
+## 8. Risks and Mitigation
 
 | Risk | Mitigation |
 |---|---|
-| LLM writes a question about behaviour the code doesn't have | Questions are tied to a specific code unit; file and line numbers come from the parser, not the model; expected points are shown to reviewers. |
-| Grader is inconsistent or can be talked into high scores | The model labels each expected point (hit / partial / missed); the score is computed in code, never taken from the model. Answers that try to instruct the grader score 0 and are flagged. |
-| Candidate looks at the code while answering | Fine for practice. For hiring, the viva is timed and can be followed by a short live check for top candidates. The tool is a filter, not a final decision. |
-| Secrets in candidate repos sent to an LLM provider | Obvious keys and passwords are redacted before any API call. A self-hosted model is an option for production. |
-| Over-trusting the score | Every report shows the per-point evidence and the code, and verdict bands are worded as "needs a follow-up", not "reject". |
+| Incorrect LLM-generated questions | Validate question structure; tie each question to a parsed code unit with real line numbers |
+| Inconsistent grading | Use explicit expected points, compute scores in code, and benchmark against labelled answers |
+| Prompt injection in submitted code or answers | Treat repository content and answers as untrusted input; flag and zero-score injection attempts |
+| API unavailability | Provide a deterministic offline fallback |
+| Sensitive source-code exposure | Redact secrets before LLM calls and apply repository access controls |
+| Unsupported programming languages | Start with supported languages and expand incrementally |
 
-## 6. Recommendation
+Human review should remain available for high-stakes hiring or certification decisions. The system is designed to support evaluators, not replace them.
 
-Build Project Viva as a shared service used by Cynbit Studio, the hiring pipeline and BitElevate. Start with a two-week internal pilot on the next intake of assessment submissions, compare its verdicts against senior engineers' calls, tune the grader on that labelled data, then ship it in Studio as the project-based mock interview.
+## 9. Success Metrics
 
-The proof of concept in this repository covers the core loop end to end. The [Technical Approach Report](Technical_Approach_Report.md) explains how it works and what production would need.
+The system should be evaluated using measurable indicators:
+
+| Area | Metric |
+|---|---|
+| Question quality | Percentage of questions grounded in the correct code unit; question relevance and technical accuracy |
+| Grading quality | Agreement between AI grades and human evaluator grades; pairwise ranking accuracy for strong, vague and incorrect answers |
+| Robustness | Prompt-injection resistance |
+| Efficiency | Average assessment completion time; cost and latency per assessment |
+| Adoption | Candidate and instructor satisfaction |
+
+## 10. Conclusion
+
+Project Viva demonstrates how LLMs can be applied to repository-based technical assessment. By combining code analysis, contextual question generation, structured answer evaluation and detailed feedback, it helps move technical assessment beyond simple output matching.
+
+The opportunity is a natural extension of Cynbit's publicly described focus on AI-powered learning, coding assessment and career readiness. A pilot integration with Cynbit Studio or BitElevate would help validate its usefulness, assessment quality and operational feasibility before wider deployment.
+
+---
+
+**Prepared by:** Anant Pandey  
+MCA – Data Science, NIT Patna
