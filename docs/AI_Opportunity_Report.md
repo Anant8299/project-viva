@@ -17,7 +17,7 @@ Artificial Intelligence and Large Language Models (LLMs) are creating new opport
 
 Cynbit Technologies operates across AI automation, software development and digital products. Its product ecosystem includes Cynbit Studio, an AI-powered learning and career-readiness platform, and BitElevate, a practical technology education initiative.
 
-One promising opportunity is an **AI-powered Code Understanding and Technical Assessment Platform** that evaluates not only whether a candidate can produce working code, but also whether they understand the logic, architecture and decisions behind it.
+This report evaluates nine AI/ML opportunities across Cynbit's business lines: Cynbit Studio, BitElevate, client services, Revio, TenantEase and marketing. The highest-scoring opportunity is an **AI-powered Code Understanding and Technical Assessment Platform** that evaluates not only whether a candidate can produce working code, but also whether they understand the logic, architecture and decisions behind it.
 
 The proposed solution, **Project Viva**, analyzes a software repository, identifies important code units, generates contextual technical questions and evaluates candidate answers using an LLM. A working proof of concept demonstrates this workflow through a Streamlit application.
 
@@ -61,21 +61,62 @@ These methods do not fully establish whether someone understands their own imple
 
 The gap is widening as AI coding assistants make it easy to produce working code quickly. This creates a clear opportunity for AI-assisted code comprehension and viva-based evaluation.
 
+### 2.3 Other Markets Cynbit Serves
+
+- **Reputation management (Revio):** sentiment analysis and AI reply drafting are now standard features in this market, so further value lies in harder problems such as detecting coordinated fake reviews across locations.
+- **Property management (TenantEase):** predictive features such as late-payment risk need months of real payment history, which a young product may not have yet. Document extraction (leases, tenant IDs) is more immediately feasible.
+- **Client services:** inbound inquiries for AI, software and cloud projects arrive in free text and need manual qualification and scoping before a proposal can be written.
+
 ## 3. Identified AI/ML Opportunities
 
-| Opportunity | Potential application | Business value |
+Opportunities were identified across all of Cynbit's business lines and scored from 1 (low) to 5 (high) on four criteria:
+
+- **Impact:** value to Cynbit's revenue, costs or product strength
+- **Feasibility:** whether the data and technology needed are available today
+- **Time to value:** how quickly a working version could be delivered
+- **Differentiation:** how much it sets Cynbit apart from existing tools and competitors
+
+### 3.1 Opportunity Map
+
+| # | Opportunity | Business line | Impact | Feasibility | Time to value | Differentiation | Total |
+|--|------------------------------------------|--------------|-----|------|-----|------|----|
+| 1 | **AI code understanding and technical assessment (Project Viva):** repository-specific viva questions with AI grading | Cynbit Studio, hiring, BitElevate | 5 | 5 | 5 | 5 | **20** |
+| 2 | AI first-pass review of BitElevate pull requests, approved by mentors | BitElevate | 5 | 4 | 4 | 3 | 16 |
+| 3 | Adaptive learning: detect knowledge gaps from coding attempts and recommend next missions | Cynbit Studio | 4 | 3 | 3 | 4 | 14 |
+| 4 | Inbound lead triage and first-draft project scoping | Client services | 4 | 3 | 4 | 2 | 13 |
+| 5 | Coordinated fake-review and review-bomb detection across locations | Revio | 4 | 3 | 3 | 3 | 13 |
+| 6 | Website assistant grounded in Cynbit's public pages | Marketing | 2 | 5 | 5 | 1 | 13 |
+| 7 | Aspect-level review sentiment and crisis escalation | Revio | 3 | 4 | 4 | 1 | 12 |
+| 8 | Lease and tenant document extraction | TenantEase | 3 | 4 | 3 | 2 | 12 |
+| 9 | Late-payment risk scoring | TenantEase | 4 | 2 | 2 | 3 | 11 |
+
+### 3.2 Why the Other Opportunities Were Not Selected
+
+- **PR review (#2)** has high value but overlaps with mature AI code-review tools. Its main benefit is saving mentor time rather than creating a new capability. Project Viva's grading engine could later be reused for it.
+- **Adaptive learning (#3)** is promising but needs a history of learner attempts to train on. It becomes much easier once Project Viva starts producing point-by-point results for each learner.
+- **Lead triage (#4)** is useful, but a convincing prototype needs Cynbit's real inquiry data, and the approach is common in sales tools.
+- **Fake-review detection (#5)** needs labelled examples of coordinated review attacks, which are hard to get outside the product.
+- **Website assistant (#6)** is quick to build but has low impact and little differentiation.
+- **Review sentiment (#7)** is a feature Revio and its competitors already offer.
+- **Document extraction (#8)** is feasible but is a well-served problem with off-the-shelf tools.
+- **Late-payment risk (#9)** needs months of real payment data; results on synthetic data would prove little.
+
+### 3.3 Recommended Opportunity: AI-Powered Code Understanding and Technical Assessment
+
+This opportunity scored highest because it uses data Cynbit already has (every assessment and every BitElevate intern produces a GitHub repository), it can be built and validated quickly, and it serves three parts of the business with one engine:
+
+- **Cynbit Studio:** project-based AI mock interviews, adding to its coding missions, code evaluation and AI mentorship.
+- **Hiring:** an automatic viva after each take-home assessment, so engineers spend live interview time only where it is needed.
+- **BitElevate:** an end-of-sprint check that interns understand the work they shipped.
+
+The recommended opportunity brings together several capabilities:
+
+| Capability | Potential application | Business value |
 |---|---|---|
 | AI code understanding | Analyze repositories and explain code structure | Better developer understanding |
 | Intelligent technical assessment | Generate repository-specific viva questions | More contextual assessments |
 | Automated answer evaluation | Evaluate explanations using LLMs | Reduced manual evaluation effort |
-| Adaptive learning | Identify knowledge gaps and recommend topics | Personalized learning |
-| AI code review assistance | Identify potential quality and maintainability issues | Improved development workflows |
-
-### Recommended Opportunity: AI-Powered Code Understanding and Technical Assessment
-
-This opportunity fits Cynbit Studio's existing focus on AI coding missions, automated code evaluation, AI mentorship and mock interviews. It could also complement BitElevate's practical learning and assessment activities.
-
-It combines the first three opportunities in the table above into one product, and lays the groundwork for the fourth: once answers are graded point by point, the same data shows each learner's knowledge gaps.
+| Knowledge-gap detection | Use point-by-point grading results to show what each learner misses | Foundation for adaptive learning (#3) |
 
 ## 4. Proposed Solution: Project Viva
 
