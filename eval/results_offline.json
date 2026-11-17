@@ -1,0 +1,257 @@
+{
+  "summary": {
+    "mode": "offline",
+    "mean_score": {
+      "strong": 76.3,
+      "vague": 5.7,
+      "wrong": 5.7
+    },
+    "pairwise_order_accuracy": 0.944,
+    "verdict_accuracy": 0.889,
+    "injection_score": 0,
+    "n_cases": 6
+  },
+  "rows": [
+    {
+      "case": "c1",
+      "label": "strong",
+      "score": 83,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "partial"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c1",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c1",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c2",
+      "label": "strong",
+      "score": 67,
+      "verdict": "partial",
+      "points": [
+        "hit",
+        "partial",
+        "partial"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c2",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": [
+        "lots of hedging"
+      ]
+    },
+    {
+      "case": "c2",
+      "label": "wrong",
+      "score": 17,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "partial",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "strong",
+      "score": 50,
+      "verdict": "partial",
+      "points": [
+        "hit",
+        "partial",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "vague",
+      "score": 17,
+      "verdict": "weak",
+      "points": [
+        "partial",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "wrong",
+      "score": 17,
+      "verdict": "weak",
+      "points": [
+        "partial",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "strong",
+      "score": 75,
+      "verdict": "understands",
+      "points": [
+        "partial",
+        "hit",
+        "partial",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c6",
+      "label": "strong",
+      "score": 83,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "partial",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c6",
+      "label": "vague",
+      "score": 17,
+      "verdict": "weak",
+      "points": [
+        "partial",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": [
+        "very short answer"
+      ]
+    },
+    {
+      "case": "c6",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    }
+  ]
+}
