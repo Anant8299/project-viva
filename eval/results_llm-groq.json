@@ -1,0 +1,273 @@
+{
+  "summary": {
+    "mode": "llm-groq",
+    "mean_score": {
+      "strong": 100,
+      "vague": 14.8,
+      "wrong": 0
+    },
+    "pairwise_order_accuracy": 1.0,
+    "verdict_accuracy": 1.0,
+    "injection_score": 0,
+    "n_cases": 6
+  },
+  "rows": [
+    {
+      "case": "c1",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c1",
+      "label": "vague",
+      "score": 33,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "partial",
+        "partial"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c1",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer says the function appends a counter to the URL and hashes it with md5, which is not present in the code.",
+        "The answer claims the function never fails, contradicting the RuntimeError raised after MAX_ATTEMPTS."
+      ],
+      "flags": []
+    },
+    {
+      "case": "c2",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c2",
+      "label": "vague",
+      "score": 23,
+      "verdict": "weak",
+      "points": [
+        "partial",
+        "partial",
+        "missed"
+      ],
+      "errors": [],
+      "flags": [
+        "lots of hedging"
+      ]
+    },
+    {
+      "case": "c2",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer claims a new code is generated each time and that the old one is overwritten, which contradicts the code that returns the existing code when found"
+      ],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c3",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer claims the code counts requests in a fixed one\u2011minute window and resets the counter each minute, which contradicts the token\u2011bucket logic in the allow method."
+      ],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "vague",
+      "score": 33,
+      "verdict": "weak",
+      "points": [
+        "hit",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c4",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer claims any logged\u2011in user can disable a link, contradicting the code that checks record.owner_id against the caller's owner_id.",
+        "It says the API only checks that user_id is not empty, which is not true; the code performs an owner_id comparison and may raise PermissionError.",
+        "It states the link is deleted, whereas the code only sets record.disabled = True and returns a boolean."
+      ],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c5",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer claims the function sends a HEAD request and rejects URLs returning 404, which is not true; the function only validates scheme, host, and length without making network requests"
+      ],
+      "flags": []
+    },
+    {
+      "case": "c6",
+      "label": "strong",
+      "score": 100,
+      "verdict": "understands",
+      "points": [
+        "hit",
+        "hit",
+        "hit"
+      ],
+      "errors": [],
+      "flags": []
+    },
+    {
+      "case": "c6",
+      "label": "vague",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [],
+      "flags": [
+        "very short answer"
+      ]
+    },
+    {
+      "case": "c6",
+      "label": "wrong",
+      "score": 0,
+      "verdict": "weak",
+      "points": [
+        "missed",
+        "missed",
+        "missed"
+      ],
+      "errors": [
+        "The answer says the link still redirects with a warning, but the code returns None for missing or disabled records, so no redirect occurs.",
+        "The answer claims the click is counted even for disabled links, whereas the code only increments clicks after confirming the record is not None and not disabled."
+      ],
+      "flags": []
+    }
+  ]
+}
